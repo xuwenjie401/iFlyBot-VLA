@@ -11,4 +11,4 @@
 
 # 🗺️ Roadmap
 
-* [ ] 11-31: offically open-source (codes and weights)
+* [ ] 12-31: offically open-source (codes and weights)
