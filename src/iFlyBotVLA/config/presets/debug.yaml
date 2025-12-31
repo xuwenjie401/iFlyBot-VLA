@@ -1,0 +1,79 @@
+common:
+  run_id: "joint_pretrainV1"
+  is_debug: false
+  run_root_dir: "runs"
+
+model:
+  tune_mm_llm: true
+  tune_mm_mlp: true
+  tune_mm_vision: true
+
+  action_expert_cfg:
+    action_dim: 20
+    proprio_dim: 20
+    hidden_size: 1024
+    num_heads: 16
+    dropout: 0.1
+    gated: false
+    action_loss_type: "l1"
+
+  load_from_checkpoint: false
+  load_only_vlm: true
+  model_checkpoint: ""
+  is_resume: true
+  resume_step: 0
+  resume_epoch: 0
+  special_training_stage: "pretrain_stage_2"
+
+  vlm_model_path: "/wx-mix01/sppro/permanent/wjxu22/model/robobrain2_3b"
+  vlm_style: "state"
+
+  save_interval: 10000
+  image_aug: true
+  seed: 42
+
+  use_lora: false
+  freeze_vlm: false
+  lora_rank: 32
+  lora_dropout: 0.0
+  hf_token: ""
+
+datasets:
+  manip_data:
+    # dataset_use: "pretrain_joint_1219"
+    dataset_use: "test"
+
+    resize_resolution: 448
+    # action_style: "eef_pose"
+    action_style: "joint"
+    control_reference: "anchored_relative"
+    mask_virtual_view: true
+
+    # norm_unique_mark: "v0"
+    # norm_stats_repository: "/bj-home/sppro/wjxu22/data/norm_stats/"
+    # norm_mode: "quantile"
+
+    bimanual: true
+    single_to_bimanual_random_pad: false
+    rotation_representation: "quat"
+
+    state_dropout: "no"
+
+    action_duration: 1
+    action_chunk_size: 30
+
+    rlds_shuffle_buffer_size: 5000
+
+task:
+  use_lap_aux: true
+  infer_predict_latent: true
+  num_latent_tokens: 8
+
+  use_fast_aux: false
+  infer_predict_fast: false
+
+  domain_aware: false
+
+  lam_source: "lapa"
+
+  use_action_mask: false

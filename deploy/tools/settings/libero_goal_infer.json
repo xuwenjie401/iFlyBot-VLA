@@ -1,0 +1,20 @@
+{
+    "checkpoint_path": "/wx-mix01/sppro/permanent/wjxu22/model/iflybot_vla_ckpts/libero_goal_honored/20251014_0309/checkpoints/step-032591-epoch-48-loss=0.1529.pt",
+
+    "norm_stats_file": "/wx-mix01/sppro/permanent/wjxu22/datasets/statistics/libero_goal_no_noops/libero_goal_no_noops_delta_eef_absolute_v0.json",
+
+    "embodiment": "libero_goal_no_noops",
+
+    "ignore_states": false,
+
+    "image_head": "cam_head",
+    "image_wrist_left": "cam_left",
+    "image_wrist_right": "cam_right",
+
+    "is_bimanual": false,
+
+    "state_horizon": 2,
+    "old_version_ckpt": true,
+    "old_version_prompt": true
+}
+

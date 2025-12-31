@@ -9,6 +9,7 @@
 ![](assets/vla_pipeline.jpg)
 
 
-# 🗺️ Roadmap
+# 🗺️ TODO List
 
-* [ ] 12-31: offically open-source (codes and weights)
+- ⬜ Open-source model weights
+- ✅ Open-source code

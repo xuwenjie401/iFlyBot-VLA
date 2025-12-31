@@ -1,0 +1,62 @@
+{
+    "common": {
+        "run_id": "state_lap_fast_infer",
+        "is_debug": false,
+        "run_root_dir": "runs"
+    },
+    "model": {
+        "action_expert_cfg": {
+            "action_dim": 20,
+            "proprio_dim": 20,
+            "hidden_size": 1024,
+            "num_heads": 16,
+            "dropout": 0.1,
+            "gated": false,
+            "action_loss_type": "l1"
+        },
+        "load_from_checkpoint": false,
+        "load_only_vlm": true,
+        "model_checkpoint": "",
+        "vlm_model_path": "/wx-mix01/sppro/permanent/wjxu22/model/robobrain2_3b",
+        "vlm_style": "state",
+        "seed": 42,
+        "use_lora": false,
+        "lora_rank": 32,
+        "lora_dropout": 0.0,
+        "hf_token": ""
+    },
+    "datasets": {
+        "manip_data": {
+            "resize_resolution": 448,
+            "action_style": "eef_pose",
+            "control_reference": "relative",
+            "image_pad_other_view": false,
+            "mask_virtual_view": true,
+            "norm_unique_mark": "v0",
+            "norm_mode": "quantile",
+            "timestep_conditioned_norm": false,
+            "bimanual": false,
+            "single_to_bimanual_random_pad": false,
+            "rotation_representation": "quat",
+            "state_dropout": "all",
+            "action_chunk_size": 30
+        }
+    },
+    "task": {
+        "train": "infer",
+        "use_lap_aux": true,
+        "infer_predict_latent": true,
+        "num_latent_tokens": 8,
+        "use_fast_aux": true,
+        "infer_predict_fast": false,
+        "domain_aware": false,
+        "domain_freeze": false,
+        "use_action_mask": false
+    }
+}
+
+
+
+
+
+

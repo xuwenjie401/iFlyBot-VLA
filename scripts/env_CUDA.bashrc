@@ -1,0 +1,32 @@
+export OMP_NUM_THREADS=2
+# export NCCL_DEBUG_SUBSYS=P2P,SHM,NET
+# export NCCL_IB_DISABLE=0
+# export NCCL_SOCKERT_IFNAME=eno2.100
+# export NCCL_IB_CUDA_SUPPORT=1
+# export NCCL_IB_HCA=mlx5_bond_0
+# export NCCL_IB_GID_INDEX=3
+# export NCCL_ALGO=Ring
+# export HSA_FORCE_FINE_GRAIN_PCIE=1
+
+export NCCL_IB_DISABLE=0
+export NCCL_SOCKERT_IFNAME=eno2.100
+# export NCCL_SOCKERT_IFNAME=eth0
+export NCCL_DEBUG=INFO
+export NCCL_IB_GID_INDEX=3
+export NCCL_IB_TC=132
+export NCCL_IB_QPS_PER_CONNECTION=4
+export NCCL_NET_GDR_READ=1
+export NCCL_NET_GDR_LEVEL=PXB
+export NCCL_IB_HCA=mlx5_2:1,mlx5_3:1,mlx5_4:1,mlx5_5:1,mlx5_6:1,mlx5_7:1,mlx5_8:1,mlx5_9:1
+export NCCL_P2P_LEVEL=NVL
+# export NCCL_P2P_DISABLE=1
+
+# solving task failing problem
+export NCCL_PXN_DISABLE=1
+export NCCL_IB_TIMEOUT=22
+export NCCL_IB_RETRY_CNT=15
+
+export HYDRA_FULL_ERROR=1
+export THETA_DEVICE="cuda"
+export THETA_BACKEND="nccl"
+

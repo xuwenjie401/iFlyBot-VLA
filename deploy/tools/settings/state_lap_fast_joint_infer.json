@@ -1,0 +1,20 @@
+{
+    "checkpoint_path": "/wx-mix01/sppro/permanent/wjxu22/model/iflybot_vla_ckpts/1031_joint_loss0d5011_step119999.pt",
+
+    "norm_stats_file": "/wx-mix01/sppro/permanent/wjxu22/model/iflybot_vla_ckpts/norm/sppro_statistics_sppro_pick_place_p2_joint_bimanual-False_absS-True_absA-False_0915.json",
+
+    "embodiment": "sppro_pick_place_v4",
+
+    "ignore_states": false,
+
+    "image_head": "base_0_rgb",
+    "image_wrist_left": "left_wrist_0_rgb",
+    "image_wrist_right": "right_wrist_0_rgb",
+
+    "is_bimanual": false,
+
+    "state_horizon": 2,
+    "old_version_ckpt": true,
+    "old_version_prompt": true
+}
+
